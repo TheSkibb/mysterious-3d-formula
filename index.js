@@ -170,7 +170,8 @@ function frame(){
 
     setTimeout(frame, 1000/FPS)
 }
-//controls
+
+/* controls */
 
 function startStopButtonPress(){
     if(!running){
@@ -178,6 +179,10 @@ function startStopButtonPress(){
         setTimeout(frame, 1000/FPS)
     }else{
         running = false
+        //set the inputs to be the current angle
+        XINP.value = angleX * 100
+        YINP.value = angleY * 100
+        ZINP.value = angleZ * 100
     }   
 }
 
