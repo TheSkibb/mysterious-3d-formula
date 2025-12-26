@@ -1,0 +1,85 @@
+body{
+}
+button{
+    font-size: 150%;
+}
+#wrapper{
+    max-width:800px;
+}
+#controls{
+    background-color: grey;
+    width: 100%;
+}
+.rangeInp{
+    margin-left: 5%;
+    margin-right: 5%;
+    width:90%;
+    height: 50px;
+    touch-action: pan-x;
+}
+
+/*make thumb bigger on mobile*/
+input[type="range"] {
+  -webkit-appearance: none; /* removes native styling in WebKit */
+  appearance: none;
+  width: 100%;
+  height: 44px;             /* taller track so thumb fits and is easier to touch */
+  margin: 8px 0;
+  background: transparent;  /* we'll style the track separately */
+  touch-action: pan-x;      /* helps avoid gesture conflicts on some devices */
+  cursor: pointer;
+}
+
+/* Track (webkit) */
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 10px;
+  background: #e6e6e6;
+  border-radius: 6px;
+}
+
+/* Track (Firefox) */
+input[type="range"]::-moz-range-track {
+  height: 10px;
+  background: #e6e6e6;
+  border-radius: 6px;
+}
+
+/* Thumb - WebKit (Chrome, Safari, Edge) */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 36px;              /* visible thumb size */
+  height: 36px;
+  border-radius: 50%;
+  background: #007bff;
+  border: none;
+  margin-top: -13px;        /* center thumb on the taller track: -(thumb/2 - track/2) */
+  box-shadow: 0 0 0 12px rgba(0,0,0,0.08); /* expands hit area visually */
+  transition: transform 120ms ease;
+}
+
+/* Thumb - Firefox */
+input[type="range"]::-moz-range-thumb {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #007bff;
+  border: none;
+  box-shadow: 0 0 0 12px rgba(0,0,0,0.08);
+}
+
+/* Thumb - IE/Edge (legacy) */
+input[type="range"]::-ms-thumb {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #007bff;
+  border: none;
+  box-shadow: 0 0 0 12px rgba(0,0,0,0.08);
+}
+
+/* Optional: enlarge thumb while dragging/touching */
+input[type="range"]:active::-webkit-slider-thumb,
+input[type="range"]:active::-moz-range-thumb {
+  transform: scale(1.15);
+}
+

@@ -1,42 +1,49 @@
 <!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="styles.css">
+</head>
 
 <style>
-    body{
-    }
-    button{
-        font-size: 150%;
-    }
 </style>
 <body>
-    <canvas id="game"></canvas>
+    <div id="wrapper">
+        <canvas id="game"></canvas>
 
-    <div id="controls">
-        <button 
-            id="playPauseBtn"
-            onclick="startStopButtonPress()"
-        >start/stop</button>
-        <br>
-        <input 
-            id="rotateXInp"
-            type="range"
-            min="0"
-            max="600"
-        >
-        <br>
-        <input 
-            id="rotateYInp"
-            type="range"
-            min="0"
-            max="600"
-        >
-        <br>
-        <input 
-            id="rotateZInp"
-            type="range"
-            min="0"
-            max="600"
-        >
-    </div>
+        <div id="controls">
+            <button 
+                id="playPauseBtn"
+                onclick="startStopButtonPress()"
+            >start/stop</button>
+            <br>
+            <input 
+                id="rotateXInp"
+                class="rangeInp"
+                width="800"
+                type="range"
+                min="0"
+                max="600"
+            >
+            <br>
+            <input 
+                id="rotateYInp"
+                class="rangeInp"
+                type="range"
+                min="0"
+                max="600"
+            >
+            <br>
+            <input 
+                id="rotateZInp"
+                class="rangeInp"
+                type="range"
+                min="0"
+                max="600"
+            >
+        </div>
+    <div>
     <script src="index.js"></script>
 
 </body
+<footer>
+    <i>source code on <a href="https://github.com/TheSkibb/mysterious-3d-formula#">github</a></i>
+</footer>
